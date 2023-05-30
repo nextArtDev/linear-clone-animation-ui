@@ -1,3 +1,6 @@
+import Container from './components/Container'
+import Footer from './components/Footer'
+import Header from './components/Header'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,7 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head />
+      <body className={inter.className}>
+        <div>
+          <Header />
+          <main className="pt-[var(--navigation-height)]">{children}</main>
+          <Footer />
+        </div>
+      </body>
     </html>
   )
 }
