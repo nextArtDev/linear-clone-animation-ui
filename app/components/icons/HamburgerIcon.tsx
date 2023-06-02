@@ -1,7 +1,7 @@
 // icon:menu-4-line | Remix Icon https://remixicon.com/ | Remix Design
 import * as React from 'react'
 type HamburgerIcon = {
-  props: React.SVGProps<SVGSVGElement>
+  props?: React.SVGProps<SVGSVGElement>
   hamburgerMenuIsOpen: boolean
 }
 function HamburgerIcon({ props, hamburgerMenuIsOpen }: HamburgerIcon) {

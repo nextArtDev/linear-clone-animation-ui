@@ -51,7 +51,7 @@ const footerLinks = [
 
 const Footer = (props: Props) => {
   return (
-    <footer className=" border-t border-white/20 py-14 text-sm ">
+    <footer className=" border-t border-offWhite/20 py-14 text-sm ">
       <Container className="flex flex-col md:flex-row justify-between ">
         <div>
           <div className="flex flex-row lg:flex-col h-full justify-between ">
@@ -77,7 +77,7 @@ const Footer = (props: Props) => {
                   <li className="[&_a]:last:mb-0" key={link.title}>
                     <Link
                       href={link.href}
-                      className=" block mb-3 text-grey hover:text-white transition-colors "
+                      className=" block mb-3 text-grey hover:text-off-white transition-colors "
                     >
                       {link.title}
                     </Link>
