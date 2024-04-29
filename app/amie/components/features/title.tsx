@@ -40,7 +40,7 @@ export const FeatureTitle = ({ children, id }: Props) => {
     <motion.p
       ref={ref}
       className={classNames(
-        'feature-title py-16 font-heading text-5xl transition-colors text-gray-800'
+        'feature-title py-16 font-heading text-sm max-sm:max-w-[70px] md:text-3xl transition-colors text-gray-800'
         // isInView ? 'text-black' : 'text-gray-300'
       )}
       whileInView={{ color: 'white' }}

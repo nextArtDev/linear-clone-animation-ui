@@ -116,8 +116,8 @@ function App() {
   }, [animate, fullscreenFeature, lastFullscreenFeature])
 
   return (
-    <div className="mx-auto max-w-6xl px-4">
-      <Hero />
+    <div className="mx-auto max-w-6xl px-0.5 md:px-4">
+      {/* <Hero /> */}
       <div ref={scope}>
         {features.map((feature) => (
           <feature.visual id={feature.id} key={feature.id} />
@@ -128,8 +128,15 @@ function App() {
         >
           Back to site
         </button>
-        <div className="flex w-full items-start gap-20">
-          <div className="w-full py-[50vh]">
+        <div className="flex w-full items-start gap-2 md:gap-20">
+          <div className="sticky top-0 flex h-screen w-full items-center">
+            <div className="relative aspect-square w-full rounded-2xl bg-gray-100 [&:has(>_.active-card)]:bg-transparent">
+              {features.map((feature) => (
+                <feature.card id={feature.id} key={feature.id} />
+              ))}
+            </div>
+          </div>
+          <div className="w-1/5 md:w-full py-[50vh]">
             <ul>
               {features.map((feature) => (
                 <li key={feature.id}>
@@ -137,13 +144,6 @@ function App() {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="sticky top-0 flex h-screen w-full items-center">
-            <div className="relative aspect-square w-full rounded-2xl bg-gray-100 [&:has(>_.active-card)]:bg-transparent">
-              {features.map((feature) => (
-                <feature.card id={feature.id} key={feature.id} />
-              ))}
-            </div>
           </div>
         </div>
       </div>
