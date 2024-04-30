@@ -128,9 +128,10 @@ function App() {
         >
           Back to site
         </button>
+        {/* [&:has(>_.active-card)]:bg-transparent - in the has() we're gonna target that element that this div should have by direct child selector => if it has element that have active-card class then bg-transparent */}
         <div className="flex w-full items-start gap-2 md:gap-20">
           <div className="sticky top-0 flex h-screen w-full items-center">
-            <div className="relative aspect-square w-full rounded-2xl bg-gray-100 [&:has(>_.active-card)]:bg-transparent">
+            <div className="relative aspect-square w-full rounded-2xl [&:has(>_.active-card)]:bg-transparent">
               {features.map((feature) => (
                 <feature.card id={feature.id} key={feature.id} />
               ))}
